@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   get '/auth/verify', to: 'authentication#verify'
   resources :comments
   resources :songs
-  resources :users
+  resources :users, only: :create
   
 end
