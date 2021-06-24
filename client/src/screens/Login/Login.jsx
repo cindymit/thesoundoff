@@ -1,6 +1,6 @@
 import "./Login.css";
-import React from "react";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 export default function Login(props) {
   const [formData, setFormData] = useState({
@@ -19,10 +19,9 @@ export default function Login(props) {
   };
 
   return (
-    <div>
       <form>
         <h1>
-          <LOGIN></LOGIN>
+          LOGIN
         </h1>
         <label>
           Username:
@@ -34,9 +33,8 @@ export default function Login(props) {
           <input type="password" name="password" value={password} onChange={handleChange}/>
         </label>
         <br />
-        <Link to="/signup">Signup</Link>
+        <Link to="/signup">SIGN-UP</Link>
         <button>Submit</button>
       </form>
-    </div>
   );
 }
