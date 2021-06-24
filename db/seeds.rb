@@ -34,36 +34,36 @@ puts "#{User.count} users created"
 
 puts "#{Song.count} songs created"
 
-comment = Comment.create!(user: @cindy, content: 'I love this song!', song: @good_for_you)
-@comment = Comment.create!(user: @nadia, content: 'SONG OF THE YEAR!', song: @good_for_you)
-@comment = Comment.create!(user: @katie, content: 'No other song can compare!', song: @good_for_you)
+Comment.create!(user: @cindy, content: 'I love this song!', song: @good_for_you)
+Comment.create!(user: @nadia, content: 'SONG OF THE YEAR!', song: @good_for_you)
+Comment.create!(user: @katie, content: 'No other song can compare!', song: @good_for_you)
 
 comment = Comment.create!(user: @cindy, content: 'I love this song!', song: @bad_boy)
-@comment = Comment.create!(user: @nadia, content: 'SONG OF THE YEAR!', song: @bad_boy)
-@comment = Comment.create!(user: @katie, content: 'No other song can compare!', song: @bad_boy)
+Comment.create!(user: @nadia, content: 'SONG OF THE YEAR!', song: @bad_boy)
+Comment.create!(user: @katie, content: 'No other song can compare!', song: @bad_boy)
 
-@comment = Comment.create!(user: @cindy, content: 'I love this song!', song: @butter)
-@comment = Comment.create!(user: @nadia, content: 'SONG OF THE YEAR!', song: @butter)
-@comment = Comment.create!(user: @katie, content: 'No other song can compare!', song: @butter)
+Comment.create!(user: @cindy, content: 'I love this song!', song: @butter)
+Comment.create!(user: @nadia, content: 'SONG OF THE YEAR!', song: @butter)
+Comment.create!(user: @katie, content: 'No other song can compare!', song: @butter)
 
-@comment = Comment.create!(user: @cindy, content: 'I love this song!', song: @safaera)
-@comment = Comment.create!(user: @nadia, content: 'SONG OF THE YEAR!', song: @safaera)
-@comment = Comment.create!(user: @katie, content: 'No other song can compare!', song: @safaera)
+Comment.create!(user: @cindy, content: 'I love this song!', song: @safaera)
+Comment.create!(user: @nadia, content: 'SONG OF THE YEAR!', song: @safaera)
+Comment.create!(user: @katie, content: 'No other song can compare!', song: @safaera)
 
-@comment = Comment.create!(user: @cindy, content: 'I love this song!', song: @levitating)
-@comment = Comment.create!(user: @nadia, content: 'SONG OF THE YEAR!', song: @levitating)
-@comment = Comment.create!(user: @katie, content: 'No other song can compare!', song: @levitating)
+Comment.create!(user: @cindy, content: 'I love this song!', song: @levitating)
+Comment.create!(user: @nadia, content: 'SONG OF THE YEAR!', song: @levitating)
+Comment.create!(user: @katie, content: 'No other song can compare!', song: @levitating)
 
-@comment = Comment.create!(user: @cindy, content: 'I love this song!', song: @leave_the_door_open)
-@comment = Comment.create!(user: @nadia, content: 'SONG OF THE YEAR!', song: @leave_the_door_open)
-@comment = Comment.create!(user: @katie, content: 'No other song can compare!', song: @leave_the_door_open)
+Comment.create!(user: @cindy, content: 'I love this song!', song: @leave_the_door_open)
+Comment.create!(user: @nadia, content: 'SONG OF THE YEAR!', song: @leave_the_door_open)
+Comment.create!(user: @katie, content: 'No other song can compare!', song: @leave_the_door_open)
 
-@comment = Comment.create!(user: @cindy, content: 'I love this song!', song: @juicy)
-@comment = Comment.create!(user: @nadia, content: 'SONG OF THE YEAR!', song: @juicy)
-@comment = Comment.create!(user: @katie, content: 'No other song can compare!', song: @juicy)
+Comment.create!(user: @cindy, content: 'I love this song!', song: @juicy)
+Comment.create!(user: @nadia, content: 'SONG OF THE YEAR!', song: @juicy)
+Comment.create!(user: @katie, content: 'No other song can compare!', song: @juicy)
 
-@comment = Comment.create!(user: @cindy, content: 'I love this song!', song: @lovesick_girl)
-@comment = Comment.create!(user: @nadia, content: 'SONG OF THE YEAR!', song: @lovesick_girl)
-@comment = Comment.create!(user: @katie, content: 'No other song can compare!', song: @lovesick_girl)
+Comment.create!(user: @cindy, content: 'I love this song!', song: @lovesick_girl)
+Comment.create!(user: @nadia, content: 'SONG OF THE YEAR!', song: @lovesick_girl)
+Comment.create!(user: @katie, content: 'No other song can compare!', song: @lovesick_girl)
 
 puts "#{Comment.count} comments created"
