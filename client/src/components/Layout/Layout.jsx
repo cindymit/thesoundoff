@@ -9,8 +9,8 @@ export default function Layout(props) {
         <Link to='/'><h1>thesoundoff.</h1></Link>
         <Link to='/login'>Login</Link>
         <Link to='/signup'>Signup</Link>
+        <hr />
       </header>
-      (props.children)
     </div>
   )
 }

@@ -10,8 +10,6 @@ function App() {
           <Route path='/login'>
 
           </Route>
-        </Switch>
-        <Switch>
           <Route path='/signup'>
             
           </Route>
