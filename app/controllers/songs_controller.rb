@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-  before_action :set_song, only: [:show, :update, :destroy]
+  before_action :set_song, only: [:show, :update, :destroy, :add_comment]
   before_action :authorize_request, except: [:index, :show]
 
   # GET /songs
@@ -38,6 +38,18 @@ class SongsController < ApplicationController
   # DELETE /songs/1
   def destroy
     @song.destroy
+  end
+
+  # PUT /comments/1/songs/1
+  def add_comment
+    @comment = Comment.find(params[:comment_id])
+    # @song = Song.find(params[:id])
+
+    @comment.songs << @song
+    # @comment.songs.push(@song)
+    # ==== OR ====
+    # @song.comments << @comment
+    render json: @song, include: :comments
   end
 
   private
