@@ -11,6 +11,7 @@ export default function Layout(props) {
         <Link to='/signup'>Signup</Link>
         <hr />
       </header>
+      {props.children}
     </div>
   )
 }

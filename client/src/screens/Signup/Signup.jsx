@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Signup.css';
 
 import React from 'react';
@@ -22,7 +23,7 @@ export default function Signup(props) {
 
   return (
     <form>
-      <h3>Register</h3>
+      <h1>SIGN-UP</h1>
       <label>
         Username:
         <input
@@ -49,6 +50,10 @@ export default function Signup(props) {
       </label>
       <br />
       <button>Submit</button>
+      <h4>Already have an account?
+        <br />
+        <Link to='/login'>Login Here!</Link>
+      </h4>
     </form>
   );
 }
