@@ -24,6 +24,7 @@ export default function Layout(props) {
         {currentUser && (
           <>
             <Link to="/songs">All Songs</Link>
+            <Link to="/createsong">Create</Link>
           </>
         )}
         <hr />
