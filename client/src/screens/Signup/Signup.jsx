@@ -12,6 +12,7 @@ export default function Signup(props) {
   });
 
   const { username, email, password } = formData;
+  const { handleSignup } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,7 +23,10 @@ export default function Signup(props) {
   };
 
   return (
-    <form>
+    <form onSubmit={(e) => {
+      e.preventDefault();
+      handleSignup(formData);
+    }}>
       <h1>SIGN-UP</h1>
       <label>
         Username:
