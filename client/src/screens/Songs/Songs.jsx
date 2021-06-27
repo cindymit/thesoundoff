@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { Fragment } from "react";
+import "./Songs.css";
 
 export default function Songs(props) {
   const { songs } = props;
 
   return (
-    <div className="songs-container">
+    <div className="songs-page">
       <div className="intro">
         <h3>Browse All Music</h3>
         <p>
@@ -17,9 +18,11 @@ export default function Songs(props) {
         {songs.map((song) => (
           <Fragment key={song.id}>
             <Link to={`/songs/${song.id}`}>
-              <img src={song.image_url} alt="album-cover" />
-              <p>{song.artist}</p>
-              <p>{song.title}</p>
+              <div className="single">
+                <img src={song.image_url} alt="album-cover" />
+                <p>{song.artist}</p>
+                <p>{song.title}</p>
+              </div>
             </Link>
           </Fragment>
         ))}

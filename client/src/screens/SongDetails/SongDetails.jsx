@@ -1,27 +1,49 @@
-// import "./SongDetails.css";
-// import Songs from "../screens/Songs";
-// import { Link } from "react-router-dom";
+import "./SongDetails.css";
+import { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
 
-// export default function SongDetails() {
-//   return (
-//     <div>
-//       <h1>Song Details</h1>
-//       {songItem?.comments.map((comment) => (
-// 				<p key={comment.id}>{comment.content}</p>
-// 			))}
-//       <div className="img-container">
-//         <img src={song_id.image_url} />
-//       </div>
-//       <div className="details-container">
-//         <p>Artist: {song_id.artist}</p>
-//         <p>Song Title: {song_id.title}</p>
-//         <p>Genre: {song_id.genre}</p>
-//         <p>Album: {song_id.album}</p>
-//         <p>Year Released: {song_id.year_released}</p>
-//       </div>
-//       <Link to="/">
-//         <button>Back to All Songs</button>
-//       </Link>
-//     </div>
-//   );
-// }
+import { getOneSong } from "../../services/songs";
+
+export default function SongDetails(props) {
+  const [song, setSong] = useState({});
+  // const { comments } = props;
+  const { id } = useParams();
+
+  useEffect(() => {
+    const fetchSong = async () => {
+      const songData = await getOneSong(id);
+      setSong(songData);
+    };
+    fetchSong();
+  }, [id]);
+
+  return (
+    <div>
+      <h1>Song Details</h1>
+      {/* {songInfo?.songs.map((song) => (
+        <p key={song.id}></p>
+      ))} */}
+      <div className="img-container">
+        <h1>Image</h1>
+        <img src={song.image_url} />
+      </div>
+      <div className="details-container">
+        <h1>Details</h1>
+        <p>Artist: {song.artist}</p>
+        <p>Song Title: {song.title}</p>
+        <p>Genre: {song.genre}</p>
+        <p>Album: {song.album}</p>
+        <p>Year Released: {song.year_released}</p>
+      </div>
+      <div>
+        <h1>Comments</h1>
+        {/* {comments.map((comment) => (
+          <p key={comment.id}>{comment.content}</p>
+        ))} */}
+      </div>
+      <Link to="/songs">
+        <button>Back to All Songs</button>
+      </Link>
+    </div>
+  );
+}
