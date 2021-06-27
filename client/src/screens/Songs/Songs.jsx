@@ -17,7 +17,7 @@ export default function Songs(props) {
         {songs.map((song) => (
           <Fragment key={song.id}>
             <Link to={`/songs/${song.id}`}>
-              <img src={song.image_url} alt="song-image" />
+              <img src={song.image_url} alt="album-cover" />
               <p>{song.artist}</p>
               <p>{song.title}</p>
             </Link>
