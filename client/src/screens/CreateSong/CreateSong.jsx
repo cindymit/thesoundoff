@@ -23,8 +23,6 @@ export default function CreateSong(props) {
       [name]: value,
     }));
   };
-  // history.push("/songs")
-  // Find a way to route back to all songs after submitting form
 
   return (
     <div className="create-container">
