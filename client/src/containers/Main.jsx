@@ -67,7 +67,7 @@ export default function Main() {
           <Songs songs={songs} handleDelete={handleDelete} />
         </Route>
         <Route path="/comments">
-          <Comments comments={comments} />
+          <Comments comments={comments} handleCreate={handleCreate}/>
         </Route>
       </Switch>
     </div>

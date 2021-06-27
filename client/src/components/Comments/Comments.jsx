@@ -1,32 +1,54 @@
 import "./Comments.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import React from "react";
 
 export default function Comments(props) {
-  const { comments } = props;
-  const [comment, setComment] = useState({
+  const [commentData, setCommentData] = useState({
     content: "",
   });
+  const history = useHistory();
 
-  const { content } = comment;
+  const { content } = commentData;
+  const { handleCreate, comments } = props;
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setCommentData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
 
   return (
     <div className="comment-container">
       <h3>Comments</h3>
       {comments.map((comment) => (
-				<p key={comment.id}>{comment.content}</p>
-			))}
+        <p key={comment.id}>{comment.content}</p>
+      ))}
       <div className="comments-form">
-        <form>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleCreate(commentData);
+          }}
+        >
           <input
             type="text"
             name="content"
             value={content}
             placeholder="Write your comment in here!"
+            onChange={handleChange}
           />
-          <br/>
-          <button type="submit">Submit</button>
+          <br />
+          <button
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleCreate(commentData);
+              history.push("/comments");
+            }}
+          >
+            Submit
+          </button>
         </form>
       </div>
     </div>
