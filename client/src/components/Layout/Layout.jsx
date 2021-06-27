@@ -25,6 +25,8 @@ export default function Layout(props) {
           <>
             <Link to="/songs">All Songs</Link>
             <Link to="/createsong">Create</Link>
+            <Link to="/edit">Edit/Delete</Link>
+            <Link to="/comments">Comments</Link>
           </>
         )}
         <hr />

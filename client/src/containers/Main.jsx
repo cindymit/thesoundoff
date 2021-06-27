@@ -1,11 +1,11 @@
-import { Switch, Route, useHistoryy } from "react-router-dom";
+import { Switch, Route, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./Main.css";
-import Comments from "./components/Comments/Comments";
-import AllSongs from "./screens/AllSongs/AllSongs";
-import CreateSong from "./screens/CreateSong/CreateSong";
-import SongDetails from "./screens/SongDetails/SongDetails";
-import EditDelete from "./screens/EditDelete/EditDelete";
+import Comments from "../components/Comments/Comments";
+import AllSongs from "../screens/AllSongs/AllSongs";
+import CreateSong from "../screens/CreateSong/CreateSong";
+import SongDetails from "../screens/SongDetails/SongDetails";
+import EditDelete from "../screens/EditDelete/EditDelete";
 import { getAllComments } from "../services/comments";
 import { deleteSong, getAllSongs, postSong, putSong } from "../services/songs";
 
@@ -53,7 +53,6 @@ export default function Main() {
 
   return (
     <div className="main">
-      <h1>This is the main container!</h1>
       <Switch>
         <Route path="/songs/:id/edit">
           <EditDelete songs={songs} handleUpdate={handleUpdate} />
