@@ -1,6 +1,5 @@
 import "./CreateSong.css";
 import { useState } from "react";
-import React from "react";
 
 export default function CreateSong(props) {
   const [formData, setFormData] = useState({
@@ -35,21 +34,24 @@ export default function CreateSong(props) {
           type="text"
           name="artist"
           value={artist}
+          placeholder="Artist"
           onChange={handleChange}
         />
-        <input type="text" name="title" value={title} onChange={handleChange} />
-        <input type="text" name="genre" value={genre} onChange={handleChange} />
-        <input type="text" name="album" value={album} onChange={handleChange} />
+        <input type="text" name="title" value={title} placeholder="Title" onChange={handleChange} />
+        <input type="text" name="genre" value={genre} placeholder="Genre" onChange={handleChange} />
+        <input type="text" name="album" value={album} placeholder="Album" onChange={handleChange} />
         <input
           type="text"
           name="year_released"
           value={year_released}
+          placeholder="Year Released"
           onChange={handleChange}
         />
         <input
           type="text"
           name="image_url"
           value={image_url}
+          placeholder="Image URL"
           onChange={handleChange}
         />
       </form>

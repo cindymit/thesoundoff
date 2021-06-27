@@ -24,14 +24,14 @@ export default function Layout(props) {
         {currentUser && (
           <>
             <Link to="/songs">All Songs</Link>
-            <Link to="/createsong">Create</Link>
-            {/* <Link to="/edit">Edit/Delete</Link>
-            <Link to="/comments">Comments</Link> */}
+            <Link to="/songs/new">Create</Link>
+            <Link to="/edit">Edit/Delete</Link>
+            <Link to="/comments">Comments</Link>
           </>
         )}
         <hr />
       </header>
-      {props.children}
+      {children}
     </div>
   );
 }

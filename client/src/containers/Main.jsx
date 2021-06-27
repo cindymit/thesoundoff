@@ -57,11 +57,11 @@ export default function Main() {
         <Route path="/songs/:id/edit">
           <EditDelete songs={songs} handleUpdate={handleUpdate} />
         </Route>
-        <Route path="/songs/:id">
-          <SongDetails comments={comments} />
-        </Route>
         <Route path="/songs/new">
           <CreateSong handleCreate={handleCreate} />
+        </Route>
+        <Route path="/songs/:id">
+          <SongDetails comments={comments} />
         </Route>
         <Route path="/songs">
           <Songs songs={songs} handleDelete={handleDelete} />
