@@ -1,5 +1,6 @@
 import "./CreateSong.css";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 export default function CreateSong(props) {
   const [formData, setFormData] = useState({
@@ -10,6 +11,8 @@ export default function CreateSong(props) {
     year_released: "",
     image_url: "",
   });
+  const history = useHistory();
+
   const { artist, title, genre, album, year_released, image_url } = formData;
   const { handleCreate } = props;
 
@@ -20,6 +23,8 @@ export default function CreateSong(props) {
       [name]: value,
     }));
   };
+  // history.push("/songs")
+  // Find a way to route back to all songs after submitting form
 
   return (
     <div className="create-container">
@@ -37,9 +42,27 @@ export default function CreateSong(props) {
           placeholder="Artist"
           onChange={handleChange}
         />
-        <input type="text" name="title" value={title} placeholder="Title" onChange={handleChange} />
-        <input type="text" name="genre" value={genre} placeholder="Genre" onChange={handleChange} />
-        <input type="text" name="album" value={album} placeholder="Album" onChange={handleChange} />
+        <input
+          type="text"
+          name="title"
+          value={title}
+          placeholder="Title"
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="genre"
+          value={genre}
+          placeholder="Genre"
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="album"
+          value={album}
+          placeholder="Album"
+          onChange={handleChange}
+        />
         <input
           type="text"
           name="year_released"
@@ -54,8 +77,16 @@ export default function CreateSong(props) {
           placeholder="Image URL"
           onChange={handleChange}
         />
+        <button
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleCreate(formData);
+            history.push("/songs");
+          }}
+        >
+          Submit
+        </button>
       </form>
-      <button>Submit</button>
     </div>
   );
 }

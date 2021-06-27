@@ -5,7 +5,7 @@ export default function Songs(props) {
   const { songs } = props;
 
   return (
-    <div className="songs-page">
+    <div className="songs-container">
       <div className="intro">
         <h3>Browse All Music</h3>
         <p>
