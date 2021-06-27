@@ -61,7 +61,7 @@ export default function Main() {
           <CreateSong handleCreate={handleCreate} />
         </Route>
         <Route path="/songs/:id">
-          <SongDetails comments={comments} />
+          <SongDetails comments={comments} handleDelete={handleDelete} />
         </Route>
         <Route path="/songs">
           <Songs songs={songs} handleDelete={handleDelete} />

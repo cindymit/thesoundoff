@@ -1,12 +1,13 @@
 import "./SongDetails.css";
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+// import Comments from "../components/Comments/Comments";
 
 import { getOneSong } from "../../services/songs";
 
 export default function SongDetails(props) {
   const [song, setSong] = useState({});
-  // const { comments } = props;
+  const { comments, handleDelete } = props;
   const { id } = useParams();
 
   useEffect(() => {
@@ -18,14 +19,10 @@ export default function SongDetails(props) {
   }, [id]);
 
   return (
-    <div>
-      <h1>Song Details</h1>
-      {/* {songInfo?.songs.map((song) => (
-        <p key={song.id}></p>
-      ))} */}
+    <div className="details-container">
       <div className="img-container">
         <h1>Image</h1>
-        <img src={song.image_url} />
+        <img src={song.image_url} alt="album-cover" />
       </div>
       <div className="details-container">
         <h1>Details</h1>
@@ -35,11 +32,16 @@ export default function SongDetails(props) {
         <p>Album: {song.album}</p>
         <p>Year Released: {song.year_released}</p>
       </div>
+      <div className="button-container">
+        <Link to='/songs/:id/edit'><button>Edit</button></Link>
+        <Link to='/songs'><button onClick={() => handleDelete(song.id)}>Delete</button></Link>
+      </div>
       <div>
         <h1>Comments</h1>
-        {/* {comments.map((comment) => (
-          <p key={comment.id}>{comment.content}</p>
-        ))} */}
+        <div className="comments-container">
+          <h3>This is where the comments go!</h3>
+          {/* <Comments /> */}
+        </div>
       </div>
       <Link to="/songs">
         <button>Back to All Songs</button>
