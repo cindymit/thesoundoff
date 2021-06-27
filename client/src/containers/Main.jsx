@@ -2,7 +2,7 @@ import { Switch, Route, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./Main.css";
 import Comments from "../components/Comments/Comments";
-import AllSongs from "../screens/AllSongs/AllSongs";
+import Songs from "../screens/Songs/Songs";
 import CreateSong from "../screens/CreateSong/CreateSong";
 import SongDetails from "../screens/SongDetails/SongDetails";
 import EditDelete from "../screens/EditDelete/EditDelete";
@@ -64,7 +64,7 @@ export default function Main() {
           <CreateSong handleCreate={handleCreate} />
         </Route>
         <Route path="/songs">
-          <AllSongs songs={songs} handleDelete={handleDelete} />
+          <Songs songs={songs} handleDelete={handleDelete} />
         </Route>
         <Route path="/comments">
           <Comments comments={comments} />
