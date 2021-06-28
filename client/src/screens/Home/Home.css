@@ -5,9 +5,7 @@ span {
 .home-container {
   background-image: url("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  position: absolute;
+  background-size: contain;
   height: 100%;
   text-align: left;
 }
@@ -21,17 +19,35 @@ span {
   padding: -50px;
   font-family: "Abril Fatface", cursive;
   font-size: 3em;
-  border: 1px solid black;
-}
-
-.introduction p {
-  border: 1px solid red;
 }
 
 .get-started {
   border: 1px solid black;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   padding: 10px;
   color: white;
   background-color: rgb(71, 73, 100, 0.9);
+}
+
+/* MEDIA QUERY - MOBILE */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  body {
+    background-color: rgb(52, 26, 26);
+  }
+  .layout-container {
+    display: grid;
+  }
+}
+
+/*MEDIA QUERY - TABLET*/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  body {
+    background-color: rgb(37, 37, 104);
+  }
+  .layout-container {
+    display: grid;
+  }
 }
