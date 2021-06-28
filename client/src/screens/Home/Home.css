@@ -5,29 +5,46 @@ span {
 .home-container {
   background-image: url("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  padding: 1px;
   height: 100%;
   text-align: left;
 }
 
 .introduction {
   padding-left: 30px;
-  width: 30%;
+  width: 45%;
+  margin-top: 100px;
+  font-size: 1.5em;
 }
 
 .introduction h1 {
-  padding: -50px;
   font-family: "Abril Fatface", cursive;
   font-size: 3em;
+  margin: -20px 0px;
 }
 
 .get-started {
-  border: 1px solid black;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  padding: 10px;
+  width: 75px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #474954;
+  align-self: center;
+  transition: all 0.5s ease;
   color: white;
-  background-color: rgb(71, 73, 100, 0.9);
+  border: 1px solid black;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  padding: 10px;
+  outline: none;
+}
+
+.get-started:hover {
+  color: black;
+  background-color: white;
 }
 
 /* MEDIA QUERY - MOBILE */

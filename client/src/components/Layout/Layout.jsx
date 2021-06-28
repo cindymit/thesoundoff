@@ -14,18 +14,21 @@ export default function Layout(props) {
               alt="logo"
               className="logo"
             />
-            </Link>
-          </div>
-        
+          </Link>
+        </div>
+
         {currentUser ? (
           <>
             <div className="welcome">
               <p>
-                Welcome back, {currentUser.username}!
-                <button onClick={handleLogout}>Logout</button>
+                <span className="welcome-back">
+                  <strong>Welcome back,</strong>
+                </span>{" "}
+                {currentUser.username}!
               </p>
-              </div>
-            </>
+              <button className="logout" onClick={handleLogout}>Logout</button>
+            </div>
+          </>
         ) : (
           <>
             <div className="register-links">
@@ -39,21 +42,30 @@ export default function Layout(props) {
             <div className="authorized-links">
               <div className="home-link">
                 <Link to="/">
-                  <img src="https://img.icons8.com/material-rounded/100/ffffff/home.png" alt="home-icon"/>{" "}
+                  <img
+                    src="https://img.icons8.com/material-rounded/100/ffffff/home.png"
+                    alt="home-icon"
+                  />{" "}
                   Home
                 </Link>
-              </div> 
+              </div>
               <br />
               <div className="songs-link">
                 <Link to="/songs">
-                  <img src="https://img.icons8.com/ios-glyphs/100/ffffff/headphones.png" alt="songs-icon" />{" "}
+                  <img
+                    src="https://img.icons8.com/ios-glyphs/100/ffffff/headphones.png"
+                    alt="songs-icon"
+                  />{" "}
                   All Songs
                 </Link>
               </div>
               <br />
               <div className="create-link">
                 <Link to="/songs/new">
-                  <img src="https://img.icons8.com/ios-glyphs/100/ffffff/add--v1.png" alt="create-icon" />{" "}
+                  <img
+                    src="https://img.icons8.com/ios-glyphs/100/ffffff/add--v1.png"
+                    alt="create-icon"
+                  />{" "}
                   Create
                 </Link>
               </div>
