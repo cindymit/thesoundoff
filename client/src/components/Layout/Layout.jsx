@@ -8,22 +8,22 @@ export default function Layout(props) {
     <div className="layout-container">
       <header>
         <div className="logo-div">
-        <Link to="/">
-          <img
-            src="https://i.imgur.com/dN5rghq.png"
-            alt="logo"
-            className="logo"
-          />
+          <Link to="/">
+            <img
+              src="https://i.imgur.com/dN5rghq.png"
+              alt="logo"
+              className="logo"
+            />
           </Link>
         </div>
         {currentUser ? (
           <>
-            <p>
-              <div className="welcome">
-              Welcome back, {currentUser.username}!{" "} <br/>
+            <div className="welcome">
+              <p>
+                Welcome back, {currentUser.username}! <br />
                 <button onClick={handleLogout}>Logout</button>
-              </div>
-            </p>
+              </p>
+            </div>
           </>
         ) : (
           <>
@@ -36,9 +36,26 @@ export default function Layout(props) {
         {currentUser && (
           <>
             <div className="authorized-links">
-              <Link to="/">Home</Link><br/>
-              <Link to="/songs">All Songs</Link><br/>
-              <Link to="/songs/new">Create</Link>
+              <div className="home-link">
+                <Link to="/">
+                  <img src="https://img.icons8.com/material-rounded/100/ffffff/home.png" alt="home-icon"/>{" "}
+                  Home
+                </Link>
+              </div>
+              <br />
+              <div className="songs-link">
+                <Link to="/songs">
+                  <img src="https://img.icons8.com/ios-glyphs/100/ffffff/headphones.png" alt="songs-icon" />{" "}
+                  All Songs
+                </Link>
+              </div>
+              <br />
+              <div className="create-link">
+                <Link to="/songs/new">
+                  <img src="https://img.icons8.com/ios-glyphs/100/ffffff/add--v1.png" alt="create-icon" />{" "}
+                  Create
+                </Link>
+              </div>
             </div>
           </>
         )}
