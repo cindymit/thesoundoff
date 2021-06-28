@@ -6,7 +6,7 @@ export default function Songs(props) {
   const { songs } = props;
 
   return (
-    <div className="songs-page">
+    <div className="songs-container">
       <div className="intro">
         <h3>Browse All Music</h3>
         <p>
@@ -20,8 +20,8 @@ export default function Songs(props) {
             <Link to={`/songs/${song.id}`}>
               <div className="single">
                 <img src={song.image_url} alt="album-cover" />
-                <p>{song.artist}</p>
-                <p>{song.title}</p>
+                <p><strong>{song.artist}</strong></p>
+                <p className="title">{song.title}</p>
               </div>
             </Link>
           </Fragment>

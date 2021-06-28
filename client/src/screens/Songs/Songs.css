@@ -1,26 +1,11 @@
-/* header {
-  top: 0;
-  left: 0;
-  width: 250px;
-  max-width: 250px;
-  height: 100%;
-  position: absolute;
-  background-color: #474964;
-  display: flex;
-  justify-content: left;
-  flex-wrap: wrap;
-  flex-direction: column;
-} */
-
-.songs-page {
+.songs-container {
   background-image: url("https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80");
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
-  width: 80%;
-  position: absolute;
-  right: 0;
-  top: 0;
+  padding: 1px;
+  height: 100%;
+  text-align: left;
+  overflow: auto;
 }
 
 .song-card {
@@ -28,11 +13,13 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-left: 20px;
+  margin-top: 25px;
 }
 
 img {
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
   margin: 10px;
   border: 1px solid black;
 }
@@ -46,7 +33,36 @@ a {
   border: 1px solid black;
   background-color: rgb(71, 73, 100, 0.9);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  width: 175px;
-  height: 300px;
-  margin: 10px;
+  width: 150px;
+  height: 250px;
+  margin: 5px;
+  text-align: center;
+  font-size: 10px;
+  padding: 5px;
+}
+
+.intro {
+  margin-left: 20px;
+}
+
+.intro h3 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 2em;
+}
+
+.intro p {
+  margin-top: -25px;
+}
+
+a .single {
+  color: white;
+  font-size: 12px
+}
+
+.single:hover {
+  color: #ffde59;
+}
+
+.title {
+  font-family: "Abril Fatface", cursive;
 }
