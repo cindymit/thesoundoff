@@ -2,6 +2,7 @@ import { Switch, Route, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./Main.css";
 import Comments from "../components/Comments/Comments";
+import Footer from "../components/Footer/Footer";
 import Songs from "../screens/Songs/Songs";
 import CreateSong from "../screens/CreateSong/CreateSong";
 import SongDetails from "../screens/SongDetails/SongDetails";
@@ -68,12 +69,13 @@ export default function Main() {
           <Songs songs={songs} handleDelete={handleDelete} />
         </Route>
         <Route path="/comments">
-          <Comments comments={comments} handleCreate={handleCreate}/>
+          <Comments comments={comments} handleCreate={handleCreate} />
         </Route>
         <Route path="/">
           <Home />
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 }

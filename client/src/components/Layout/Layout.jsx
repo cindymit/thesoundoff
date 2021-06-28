@@ -14,17 +14,18 @@ export default function Layout(props) {
               alt="logo"
               className="logo"
             />
-          </Link>
-        </div>
+            </Link>
+          </div>
+        
         {currentUser ? (
           <>
             <div className="welcome">
               <p>
-                Welcome back, {currentUser.username}! <br />
+                Welcome back, {currentUser.username}!
                 <button onClick={handleLogout}>Logout</button>
               </p>
-            </div>
-          </>
+              </div>
+            </>
         ) : (
           <>
             <div className="register-links">
@@ -41,7 +42,7 @@ export default function Layout(props) {
                   <img src="https://img.icons8.com/material-rounded/100/ffffff/home.png" alt="home-icon"/>{" "}
                   Home
                 </Link>
-              </div>
+              </div> 
               <br />
               <div className="songs-link">
                 <Link to="/songs">
