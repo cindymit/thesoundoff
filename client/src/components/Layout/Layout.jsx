@@ -28,7 +28,6 @@ export default function Layout(props) {
             <Link to="/comments">Comments</Link>
           </>
         )}
-        <hr />
       </header>
       {children}
     </div>

@@ -40,13 +40,7 @@ export default function Comments(props) {
             onChange={handleChange}
           />
           <br />
-          <button
-            onSubmit={(e) => {
-              e.preventDefault();
-              handleCreate(commentData);
-              history.push("/comments");
-            }}
-          >
+          <button>
             Submit
           </button>
         </form>

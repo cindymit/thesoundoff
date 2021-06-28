@@ -6,6 +6,7 @@ import Songs from "../screens/Songs/Songs";
 import CreateSong from "../screens/CreateSong/CreateSong";
 import SongDetails from "../screens/SongDetails/SongDetails";
 import EditDelete from "../screens/EditDelete/EditDelete";
+import Home from "../screens/Home/Home";
 import { getAllComments } from "../services/comments";
 import { deleteSong, getAllSongs, postSong, putSong } from "../services/songs";
 
@@ -68,6 +69,9 @@ export default function Main() {
         </Route>
         <Route path="/comments">
           <Comments comments={comments} handleCreate={handleCreate}/>
+        </Route>
+        <Route path="/">
+          <Home />
         </Route>
       </Switch>
     </div>

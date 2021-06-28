@@ -11,7 +11,7 @@ class SongsController < ApplicationController
 
   # GET /songs/1
   def show
-    render json: @song
+    render json: @song, include: :comments
   end
 
   # POST /songs
