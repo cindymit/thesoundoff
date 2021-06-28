@@ -2,11 +2,34 @@ body {
   background-color: #474754;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .layout-container {
   display: flex;
-
+  left: 0;
 }
 
 .logo {
   border: none;
+}
+
+.welcome {
+  border: 1px solid yellow;
+  margin: auto;
+}
+
+.register-links {
+  border: 1px solid blue;
+}
+
+.authorized-links {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid white;
+  margin: 0 auto;
 }

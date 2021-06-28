@@ -29,42 +29,43 @@ export default function Login(props) {
       >
         {" "}
       </div>
-      <div className="login-container">
-        <form className="login-form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            handleLogin(formData);
-          }}
-        >
-          <h1>LOGIN</h1>
-          <label>
-            Username:
-            <input
-              type="text"
-              name="username"
-              value={username}
-              onChange={handleChange}
-            />
-          </label>
+      <form
+        className="login-form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleLogin(formData);
+        }}
+      >
+        <h1>LOGIN</h1>
+        <label>
+          Username:
           <br />
-          <label>
-            Password:
-            <input
-              type="password"
-              name="password"
-              value={password}
-              onChange={handleChange}
-            />
-          </label>
+          <input
+            type="text"
+            name="username"
+            value={username}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Password:
           <br />
-          <button>Submit</button>
-          <h4>
-            Don't have an account?
-            <br />
-            <Link to="/signup">Sign-up Here!</Link>
-          </h4>
-        </form>
-      </div>
+          <input
+            type="password"
+            name="password"
+            value={password}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <button className="login-btn">Submit</button>
+        <h4>
+          Don't have an account?
+          <br />
+          <Link to="/signup">Sign-up Here!</Link>
+        </h4>
+      </form>
     </div>
   );
 }
