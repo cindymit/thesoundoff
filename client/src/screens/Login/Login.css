@@ -24,13 +24,27 @@ input {
 
 .login-btn {
   width: 75px;
-  height: 25px;
+  height: 40px;
   font-size: 14px;
   font-weight: bold;
   align-self: center;
+  transition: all 0.5s ease;
+  color: white;
+  background-color: #464754;
+  border: 1px solid black;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  padding: 10px;
+  outline: none;
+}
+
+.login-btn:hover {
+  color: black;
+  background-color: #fff;
 }
 
 .login-container {
-  
   text-align: center;
 }
