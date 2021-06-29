@@ -60,10 +60,6 @@ header button {
   background-color: #ffffff;
 }
 
-.register-links {
-  border: 1px solid blue;
-}
-
 .authorized-links {
   display: unset;
   display: flex;
@@ -83,6 +79,25 @@ a:hover{
 } 
 
 .authorized-links img {
+  border: none;
+  width: 16px;
+  height: 16px;
+}
+
+.register-links {
+  display: unset;
+  display: flex;
+  flex-direction: column !important;
+}
+
+.register-links * {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.register-links img {
   border: none;
   width: 16px;
   height: 16px;

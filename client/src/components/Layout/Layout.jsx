@@ -32,8 +32,8 @@ export default function Layout(props) {
         ) : (
           <>
             <div className="register-links">
-              <Link to="/login">Login</Link>
-              <Link to="/signup">Signup</Link>
+              <Link to="/login"><img src="https://img.icons8.com/ios-glyphs/100/ffffff/login-rounded-right.png" alt="login" />Login</Link>
+              <Link to="/signup"><img src="https://img.icons8.com/material-outlined/100/ffffff/edit-user-male.png" alt="signup" />Signup</Link>
             </div>
           </>
         )}
