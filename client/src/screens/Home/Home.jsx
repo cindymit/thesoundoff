@@ -8,7 +8,6 @@ export default function Home() {
     <div className="home-container">
       <div className="introduction">
         <p>welcome to</p>
-        <h1>HELLO</h1>
         <h1>
           <span>the</span>sound<span>off</span>.
         </h1>
