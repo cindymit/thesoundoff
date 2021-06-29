@@ -46,9 +46,9 @@ _**thesoundoff.** is a website/app where music lovers from all over can post the
 |     Library      | Description                                  |
 | :--------------: | :------------------------------------------- |
 |      Axios       | HTTP requests to endpoints and perform CRUD  |
-|      React       | Building out the user interface		          |
+|      React       | Building out the user interface		  |
 |   React Router   | Define multiple routes in the application    |
-| React-Router-Dom | Dynamic client-side routing		              |
+| React-Router-Dom | Dynamic client-side routing		  |
 | React SemanticUI | Modern front-end developement framework      |
 |     Express      | Provide server-side logic for application    |
 |  Express Router  | Create router in app to handle requests      |
@@ -135,29 +135,29 @@ src
 
 | Task                 | Priority | Estimated Time | Time Invested | Actual Time |
 | -------------------- | :------: | :------------: | :-----------: | :---------: |
-| Project Research     |          |     3 hrs      |               |             |
-| Project Approval     |          |     3 hrs      |               |             |
-| React App Set-up     |          |     3 hrs      |               |             |
-| Component Set-up     |          |     3 hrs      |               |             |
-| Create user model    |          |     1 hrs      |               |             |
-| Create song model    |          |     1 hrs      |               |             |
-| Create comment model |          |     1 hrs      |               |             |
-| User controller      |          |     2 hrs      |               |             |
-| Song controller      |          |     2 hrs      |               |             |
-| Comment controller   |          |     2 hrs      |               |             |
-| Homepage	           |          |     3 hrs      |               |             |
-| Authorization        |          |     3 hrs      |               |             |
-| Login Form           |          |     2 hrs      |               |             |
-| Signup Form          |          |     2 hrs      |               |             |
-| Song Details         |          |     3 hrs      |               |             |
-| Comments	           |          |     3 hrs      |               |             |
-| Create Song Form     |          |     2 hrs      |               |             |
-| Edit/Delete	         |          |     3 hrs      |               |             |
-| CSS/Flexbox/Grid     |          |     3 hrs      |               |             |
-| Mobile Media Query   |          |     3 hrs      |               |             |
-| Tablet Media Query   |          |     3 hrs      |               |             |
-| -                    |     -    |       -        |       -       |      -      |
-| TOTAL                |          |     51 hrs     |               |             |
+| Project Research     |    H     |     3 hrs      |     3 hrs     |     3 hrs   |
+| Project Approval     |    H     |     3 hrs      |     1 hrs     |     1 hrs   |
+| React App Set-up     |    H     |     3 hrs      |     1.5 hrs   |   1.5 hrs   |
+| Component Set-up     |    H     |     3 hrs      |     1.5 hrs   |   1.5 hrs   |
+| Create user model    |    H     |     1 hrs      |     1 hrs     |     1 hrs   |
+| Create song model    |    H     |     1 hrs      |     1 hrs     |     1 hrs   |
+| Create comment model |    H     |     1 hrs      |     1 hrs     |     1 hrs   |
+| User controller      |    H     |     2 hrs      |     2 hrs     |     2 hrs   |
+| Song controller      |    H     |     2 hrs      |     2 hrs     |     2 hrs   |
+| Comment controller   |    H     |     2 hrs      |     2 hrs     |     2 hrs   |
+| Homepage	       |    L     |     3 hrs      |     3 hrs     |     3 hrs   |
+| Authorization        |    H     |     3 hrs      |     3 hrs     |     3 hrs   |
+| Login Form           |    H     |     2 hrs      |     3 hrs     |     3 hrs   |
+| Signup Form          |    H     |     2 hrs      |     3 hrs     |     3 hrs   |
+| Song Details         |    L     |     3 hrs      |     3 hrs     |     3 hrs   |
+| Comments	       |    L     |     3 hrs      |     2 hrs     |     2 hrs   |
+| Create Song Form     |    H     |     2 hrs      |     2 hrs     |     2 hrs   |
+| Edit/Delete	       |    H     |     3 hrs      |     3 hrs     |     3 hrs   |
+| CSS/Flexbox/Grid     |    L     |     3 hrs      |     5 hrs     |     5 hrs   |
+| Mobile Media Query   |    H     |     3 hrs      |     3 hrs     |     3 hrs   |
+| Tablet Media Query   |    H     |     3 hrs      |     1 hrs     |     1 hrs   |
+| -                    |    -     |       -        |       -       |      -      |
+| TOTAL                |          |     51 hrs     |     47 hrs    |    47 hrs   |
 
 <br>
 
@@ -206,3 +206,12 @@ This is my mobile media query for my layout screen. I asked my fellow classmate,
 
 ## Code Issues & Resolutions
 
+My post was not deleting if it was a new post with new comments so I went to my songs model and added: "dependent: :destroy".
+
+```
+class Song < ApplicationRecord
+  belongs_to :user
+
+  has_many :comments, dependent: :destroy
+end
+```
