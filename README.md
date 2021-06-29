@@ -184,6 +184,25 @@ src
 
 ## Code Showcase
 
+This is my mobile media query for my layout screen. I asked my fellow classmate, Cameron for help because I was having trouble positioning my layout correctly. He taught me a lot of different techniques like "!important" which adds more important to a property/value than normal, using "*" to grab all children within the parent components, and display: unset which resets a property to its inherited value.
 
+```
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .layout-container {
+    display: grid;
+  }
+  header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .authorized-links {
+    display: flex;
+    flex-direction: row !important;
+    margin: 0 auto;
+    padding: 5px;
+  }
+}
+```
 
 ## Code Issues & Resolutions
+
